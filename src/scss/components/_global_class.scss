@@ -2,13 +2,134 @@
    max-width: 1110px;
    margin: 0 auto;
 
-   @include media(max,xxl) {
+   @include media(max, xxl) {
       max-width: 539px;
    }
 
    @include media(max, md) {
-      max-width: unset;
-      padding-left: 20px;
-      padding-right: 20px;
+      max-width: 254px;
+      padding-left: 32x;
+      padding-right: 32px;
+   }
+}
+
+.links {
+   display: grid;
+   grid-auto-flow: column;
+   align-items: center;
+
+   @include media(max, xxl) {
+      column-gap: 15px;
+   }
+
+   @include media(max, md) {
+      column-gap: 31px;
+   }
+
+   &__item:nth-of-type(1) {
+      margin-right: 32px;
+   }
+
+   &__item:nth-of-type(2) {
+      margin-right: 95px;
+   }
+
+   &__item:nth-of-type(3) {
+      margin-right: 10px;
+   }
+
+   &__item:nth-of-type(1),
+   &__item:nth-of-type(2),
+   &__item:nth-of-type(3) {
+      @include media(max, xxl) {
+         margin-right: unset;
+      }
+   }
+
+   &__link {
+      display: grid;
+      grid-auto-flow: column;
+      align-items: center;
+      column-gap: 8px;
+
+      font: 16px/27px Roboto, sans-serif;
+      font-weight: 700;
+      color: var(--white);
+      transition: color 300ms ease;
+
+      span {
+         @include media(max, xxl) {
+            display: none;
+         }
+      }
+   }
+
+   &__item:hover .links__link {
+      color: var(--blue);
+   }
+
+   &__svg {
+      fill: currentColor;
+   }
+}
+
+.button {
+   display: grid;
+   grid-auto-flow: column;
+   align-items: center;
+   column-gap: 10px;
+   padding: 8px 25px;
+
+   font: 18px/30px 'Roboto', sans-serif;
+   font-weight: 700;
+   color: var(--orange);
+
+   background-color: var(--white);
+   border-radius: 100px;
+   transition: background-color 300ms ease, color 300ms ease;
+
+   &:hover {
+      background-color: var(--blue);
+      color: var(--white);
+   }
+
+   &__svg {
+      fill: currentColor;
+   }
+
+   &--icon_1 {
+      @include media (max, xxl) {
+         padding: unset;
+         background-color: transparent !important;
+         color: var(--white);
+
+         &:hover {
+            color: var(--blue);
+         }
+      }
+
+      span {
+         @include media (max, xxl) {
+            display: none;
+         }
+      }
+   }
+
+   &--icon_2 {
+      @include media (max, md) {
+         padding: unset;
+         background-color: transparent !important;
+         color: var(--white);
+
+         &:hover {
+            color: var(--blue);
+         }
+      }
+
+      span {
+         @include media (max, md) {
+            display: none;
+         }
+      }
    }
 }

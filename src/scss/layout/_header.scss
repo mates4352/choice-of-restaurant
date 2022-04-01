@@ -1,0 +1,336 @@
+.header {
+   min-height: 493px;
+   background: url("../images/background_header.jpg") no-repeat center center/ 100% 493px;
+
+   @include media(max, md) {
+      min-height: 325px;
+   }
+
+   &__wrap {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 15px;
+
+      @include media(max, xxl) {
+         column-gap: 0;
+      }
+   }
+
+   &__circle {
+      width: 42px;
+      height: 42px;
+      background-color: var(--white);
+      border-radius: 50%;
+
+      @include media(max, xxl) {
+         width: 48px;
+         height: 48px;
+      }
+
+      @include media(max, md) {
+         width: 24px;
+         height: 24px;
+      }
+   }
+
+   &__icons {
+      position: absolute;
+      top: 282px;
+      right: 28px;
+
+      display: grid;
+      row-gap: 16px;
+      justify-items: center;
+
+      @include media(max, xxl) {
+         top: 163px;
+      }
+
+      @include media(max, md) {
+         top: 102px;
+         right: 32px;
+      }
+
+   }
+
+   &__svg {
+      fill: var(--white);
+      transition: fill 300ms ease;
+   }
+
+   &__icon:hover .header__svg {
+      fill: var(--blue);
+   }
+
+   &__wrap-images {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-49%);
+      width: 554px;
+
+      @include media(max, xxl) {
+         top: 71px;
+         left: 47%;
+         width: 254px;
+      }
+
+
+      @include media(max, md) {
+         top: 12px;
+      }
+   }
+
+   &__image {
+      width: 100%;
+      height: 100%;
+   }
+
+   &__rectangle {
+      position: absolute;
+      z-index: -1;
+      //animation: animationRectangle 10s infinite ease-out;
+
+      @include media(max, md) {
+         display: none;
+      }
+
+      &--number {
+         bottom: 19px;
+         left: 225px;
+         z-index: 1;
+         border: none;
+         background-color: transparent;
+         transition: bottom 500ms ease;
+
+         @include media(max, xxl) {
+            bottom: -29px;
+            left: 205px;
+
+            width: 38px;
+            height: 38px;
+
+            transition: unset;
+         }
+
+         &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 19px;
+            height: 16px;
+
+            background: url("../images/icons/arrow.svg") no-repeat center center/100% 100%;
+            transition: top 500ms linear;
+
+            @include media(max, xxl) {
+               display: none;
+            }
+         }
+
+         &:hover {
+            bottom: 11px;
+
+            &::before {
+               top: 55%;
+            }
+         }
+
+         img {
+            width: 100%;
+            height: 100%;
+         }
+      }
+
+      &--number_1 {
+         bottom: 103px;
+         right: -310px;
+
+         @include media(max, xxl) {
+            width: 58px;
+            height: 58px;
+
+            bottom: 24px;
+            right: -146px;
+         }
+      }
+
+      &--number_2 {
+         bottom: 291px;
+         right: -147px;
+
+         @include media(max, xxl) {
+            bottom: 102px;
+            right: -79px;
+
+            width: 28px;
+            height: 28px;
+         }
+      }
+
+      &--number_3 {
+         bottom: 365px;
+         right: -347px;
+
+         @include media(max, xxl) {
+            bottom: 131px;
+            right: -161px;
+
+            width: 58px;
+            height: 58px;
+         }
+      }
+
+      &--number_4 {
+         top: 154px;
+         right: -200px;
+
+         @include media(max, xxl) {
+            top: 38px;
+            right: -100px;
+
+            width: 62px;
+            height: 62px;
+         }
+      }
+
+      &--number_5 {
+         top: 71px;
+         right: 55px;
+
+         @include media(max, xxl) {
+            top: 5px;
+            right: 4px;
+
+            width: 57px;
+            height: 57px;
+         }
+      }
+
+      &--number_6 {
+         bottom: -60px;
+         left: -93px;
+
+         @include media(max, xxl) {
+            bottom: -37px;
+            left: 11px;
+            z-index: 1;
+
+            width: 67px;
+            height: 67px;
+         }
+      }
+
+      &--number_7 {
+         bottom: 192px;
+         left: -209px;
+
+         @include media(max, xxl) {
+            bottom: 31px;
+            left: -71px;
+
+            width: 60px;
+            height: 60px;
+         }
+      }
+
+      &--number_8 {
+         bottom: 308px;
+         left: -356px;
+
+         @include media(max, xxl) {
+            bottom: 119px;
+            left: -112px;
+
+            width: 32px;
+            height: 32px;
+         }
+      }
+
+      &--number_9 {
+         top: 301px;
+         left: -379px;
+
+         @include media(max, xxl) {
+            top: 63px;
+            left: -124px;
+
+            width: 44px;
+            height: 44px;
+         }
+      }
+
+      &--number_10 {
+         top: 62px;
+         left: -11px;
+
+         @include media(max, xxl) {
+            top: -10px;
+            left: 34px;
+
+            width: 58px;
+            height: 58px;
+         }
+      }
+
+      &--number_11 {
+         top: 184px;
+         left: -200px;
+
+         @include media(max, xxl) {
+            top: 33px;
+            left: -47px;
+
+            width: 75px;
+            height: 75px;
+         }
+      }
+
+      &--number_12 {
+         bottom: 107px;
+         right: -28px;
+         z-index: 1;
+
+         @include media(max, xxl) {
+            bottom: 20px;
+            right: -62px;
+
+            width: 87px;
+            height: 87px;
+         }
+      }
+
+      &--number_13 {
+         bottom: 317px;
+         left: -35px;
+
+         @include media(max, xxl) {
+            bottom: 111px;
+            left: -20px;
+
+            width: 38px;
+            height: 38px;
+         }
+      }
+   }
+}
+
+//@keyframes animationRectangle {
+//   0% {
+//      transform: scale(1);
+//   }
+//
+//   50% {
+//      transform: scale(1.1);
+//   }
+//
+//   0% {
+//      transform: scale(1);
+//   }
+//}
