@@ -1,0 +1,14 @@
+:root {
+   --h2: 32px/1.2 'Ubuntu_Bold';
+   --p1: 18px/1.3 'Roboto';
+
+   @include media(max, xxl) {
+      --h2: 16px/1.2 'Ubuntu_Bold';
+      --p1: 14px/1.3 'Roboto';
+   }
+
+   @include media(max, md) {
+      --h2: 13px/1.2 'Ubuntu_Bold';
+      --p1: 13px/1.3 'Roboto';
+   }
+}

@@ -1,0 +1,14 @@
+.container {
+   max-width: 1110px;
+   margin: 0 auto;
+
+   @include media(max,xxl) {
+      max-width: 539px;
+   }
+
+   @include media(max, md) {
+      max-width: unset;
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+}
