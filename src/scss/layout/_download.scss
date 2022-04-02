@@ -1,15 +1,13 @@
 .download {
    position: relative;
-   z-index: -1;
-   padding-top: 336px;
+   z-index: 1;
    padding-bottom: 18px;
 
    @include media(max, xxl) {
-      padding-top: 45px;
+      padding-bottom: unset;
    }
 
    @include media(max, md) {
-      padding-top: 30px;
       padding-bottom: 230px;
    }
 
@@ -52,6 +50,7 @@
 
       font-size: 42px;
       line-height: 40px;
+      text-transform: uppercase;
 
       @include media(max, xxl) {
          font: var(--h2);
@@ -115,6 +114,10 @@
       display: block;
 
       &:hover {
+         transform: translate(-1px, 1px);
+      }
+
+      &:active {
          transform: translate(-5px, 5px);
 
          @include media(max, xxl) {

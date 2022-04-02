@@ -1,8 +1,16 @@
 .header {
    min-height: 493px;
-   background: url("../images/background_header.jpg") no-repeat center center/ 100% 493px;
+   margin-bottom: 336px;
+   background: url("../images/background_header.jpg") no-repeat center center/100% 493px;
+
+   @include media(max, xxl) {
+      min-height: 380px;
+      margin-bottom: 25px;
+      background: url("../images/background_header.jpg") no-repeat center center/1440px 380px;
+   }
 
    @include media(max, md) {
+      margin-bottom: 30px;
       min-height: 325px;
    }
 
@@ -113,7 +121,6 @@
          width: 254px;
       }
 
-
       @include media(max, md) {
          top: 12px;
       }
@@ -131,6 +138,7 @@
 
       @include media(max, md) {
          display: none;
+         visibility: hidden;
       }
 
       &--number {
@@ -169,11 +177,13 @@
             }
          }
 
-         &:hover {
-            bottom: 11px;
+         @include media(min, 768px) {
+            &:hover {
+               bottom: 11px;
 
-            &::before {
-               top: 55%;
+               &::before {
+                  top: 55%;
+               }
             }
          }
 

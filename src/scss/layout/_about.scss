@@ -5,7 +5,8 @@
 
    @include media(max, xxl) {
       height: 375px;
-      background: url("../images/background_aboutXXL.jpg") no-repeat center center/ 100% 100%;
+      margin-top: -30px;
+      background: url("../images/background_aboutXXL.jpg") no-repeat center center/100% 357px;
    }
 
    @include media(max, md) {
@@ -111,7 +112,7 @@
 
       @include media(max, xxl) {
          position: relative;
-         margin-top: 57px;
+         margin-top: 48px;
          right: -36px;
          margin-left: unset;
          width: 155px;
