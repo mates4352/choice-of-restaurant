@@ -185,7 +185,8 @@ img {
 }
 :root {
   --h2: 32px/1.2 Ubuntu_Bold,sans-serif;
-  --p1: 18px/1.35 Roboto,sans-serif
+  --p1: 18px/1.35 Roboto,sans-serif;
+  --p2: 14px/1.35 Roboto,sans-serif
 }
 .h2 {
   font: var(--h2);
@@ -193,6 +194,9 @@ img {
 }
 .p1 {
   font: var(--p1)
+}
+.p2 {
+  font: var(--p2)
 }
 .header {
   min-height: 493px;
@@ -265,7 +269,7 @@ img {
 .header__rectangle--number {
   bottom: 19px;
   left: 225px;
-  z-index: 1;
+  z-index: 110;
   border: none;
   background-color: transparent;
   -webkit-transition: bottom .5s ease;
@@ -349,7 +353,7 @@ img {
 }
 .download {
   position: relative;
-  z-index: 1;
+  z-index: -1;
   padding-top: 336px;
   padding-bottom: 18px
 }
@@ -405,6 +409,69 @@ img {
 }
 .download__button-image {
   width: 215px
+}
+.about {
+  position: relative;
+  background: url(../images/background_about.jpg) no-repeat center center/100% 100%;
+  height: 562px
+}
+.about__wrap {
+  display: grid;
+  grid-template-columns: fit-content(578px) minmax(-webkit-min-content,-webkit-max-content);
+  grid-template-columns: fit-content(578px) minmax(min-content,max-content);
+  -webkit-box-align: center;
+  align-items: center
+}
+.about__content {
+  display: grid;
+  row-gap: 20px;
+  color: var(--white)
+}
+.about__title span {
+  color: var(--orange)
+}
+.about__list {
+  display: grid;
+  grid-auto-columns: minmax(-webkit-min-content,-webkit-max-content);
+  grid-auto-columns: minmax(min-content,max-content);
+  grid-auto-flow: column;
+  -webkit-column-gap: 49px;
+  column-gap: 49px
+}
+.about__item-text {
+  font: 37px/43px Roboto,sans-serif;
+  font-weight: 600
+}
+.about__item-text span {
+  display: block;
+  font: 18px/21px Roboto,sans-serif;
+  font-weight: 400
+}
+.about__image {
+  width: 359px;
+  margin-top: -31px;
+  margin-left: 103px
+}
+.about__rectangle {
+  position: absolute
+}
+.about__rectangle--number_7 {
+  top: -23px;
+  left: 712px;
+  width: 106px;
+  height: 106px
+}
+.about__rectangle--number_12 {
+  top: -18px;
+  left: 159px;
+  width: 90px;
+  height: 90px
+}
+.about__rectangle--number_14 {
+  right: 127px;
+  bottom: -33px;
+  width: 140px;
+  height: 140px
 }
 @media only screen and (max-width:1439px) {
   .container {
@@ -578,6 +645,44 @@ img {
   .download__button-image {
     width: 117px
   }
+  .about {
+    height: 375px;
+    background: url(../images/background_aboutXXL.jpg) no-repeat center center/100% 100%
+  }
+  .about__wrap {
+    grid-template-columns: fit-content(346px) minmax(-webkit-min-content,-webkit-max-content);
+    grid-template-columns: fit-content(346px) minmax(min-content,max-content);
+    row-gap: 15px
+  }
+  .about__content {
+    row-gap: 15px;
+    margin-bottom: -85px
+  }
+  .about__title br {
+    display: none
+  }
+  .about__list {
+    -webkit-column-gap: 20px;
+    column-gap: 20px
+  }
+  .about__item-text {
+    font-size: 16px;
+    line-height: 18px
+  }
+  .about__item-text span {
+    font-size: 14px;
+    line-height: 16px
+  }
+  .about__image {
+    position: relative;
+    margin-top: 57px;
+    right: -36px;
+    margin-left: unset;
+    width: 155px
+  }
+  .about__rectangle {
+    display: none
+  }
 }
 @media only screen and (max-width:1439px) and (max-width:767px) {
   .header__list {
@@ -604,7 +709,8 @@ img {
   }
   :root {
     --h2: 13px/1.2 'Ubuntu_Bold';
-    --p1: 13px/1.3 Roboto,sans-serif
+    --p1: 13px/1.3 Roboto,sans-serif;
+    --p2: 13px/1.3 Roboto,sans-serif
   }
   .header {
     min-height: 325px
@@ -638,5 +744,33 @@ img {
     right: -20px;
     width: 15px;
     height: 15px
+  }
+  .about {
+    height: unset;
+    background: radial-gradient(95.07% 139.28% at 50% -43.54%,#513e63 0,#282837 29.64%,#4d4793 85.3%,#9260a9 100%)
+  }
+  .about__wrap {
+    grid-template-columns: 1fr;
+    row-gap: 15px
+  }
+  .about__content {
+    padding-top: 204px;
+    margin-bottom: unset;
+    row-gap: 10px
+  }
+  .about__title span {
+    display: block
+  }
+  .about__item-text {
+    font-size: 13px;
+    line-height: 15px
+  }
+  .about__image {
+    position: absolute;
+    top: -161px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin: unset
   }
 }

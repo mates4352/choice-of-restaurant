@@ -1,6 +1,6 @@
 .download {
    position: relative;
-   z-index: 1;
+   z-index: -1;
    padding-top: 336px;
    padding-bottom: 18px;
 
@@ -130,5 +130,4 @@
          width: 117px;
       }
    }
-
 }
