@@ -19,7 +19,7 @@ const config = {
 
       root:       srcPath,
       html:       `${srcPath}/*.html`,
-      js:         `${srcPath}/js/**/*.js`,
+      js:         `${srcPath}/js/main.js`,
       style:      `${srcPath}/scss/style.scss`,
       fonts:      `${srcPath}/assets/fonts/*.{ttf,eot,svg,woff,woff2}`,
       fontsFile:  `${srcPath}/scss/base/_fonts.scss`,

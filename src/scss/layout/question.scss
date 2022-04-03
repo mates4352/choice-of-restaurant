@@ -1,0 +1,141 @@
+.question {
+
+   @include media(max, xxl) {
+      padding-bottom: 10px;
+   }
+
+   @include media(max, md) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+   }
+
+   &__wrap {
+      display: grid;
+      align-items: center;
+      grid-auto-flow: column;
+      column-gap: 47px;
+
+      @include media(max, xxl) {
+         grid-auto-flow: row;
+      }
+   }
+
+   &__title {
+      max-width: 338px;
+      margin-bottom: 20px;
+   }
+
+   &__title-icon {
+      position: relative;
+      display: inline-block;
+      color: var(--orange);
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 50%;
+         right: -35px;
+         transform: translateY(-50%);
+
+         width: 30px;
+         height: 30px;
+
+         background: url("../images/icons/cookie.png") no-repeat center center/100% 100%;
+
+         @include media(max, xxl) {
+            width: 18px;
+            height: 18px;
+            right: -25px;
+            transform: translateY(-53%);
+         }
+
+         @include media(max, md) {
+            width: 15px;
+            height: 15px;
+            right: -20px;
+            transform: translateY(-55%);
+         }
+      }
+   }
+
+   &__list {
+      display: grid;
+      row-gap: 5px;
+   }
+
+   &__accordion-button {
+      position: relative;
+      display: block;
+      height: 37px;
+      width: 100%;
+      padding: 0 10px;
+      margin-bottom: 10px;
+
+      text-align: left;
+
+      background-color: var(--white);
+      border-radius: 5px;
+      box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.1);
+      border: none;
+
+      @include media(max, xxl) {
+         height: 34px;
+      }
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 50%;
+         right: 10px;
+         transform: translateY(-50%);
+
+         width: 10px;
+         height: 15px;
+
+         background: url("../images/icons/triller.svg") no-repeat center center/100% 100%;
+         transition: transform 300ms ease;
+      }
+
+      &--active {
+
+         &::before {
+            transform: translateY(-50%) rotate(-180deg);
+         }
+      }
+   }
+
+   &__accordion-title {
+      font: 16px/1.2 Roboto, sans-serif;
+      font-weight: 700;
+      color: var(--gray);
+
+      @include media(max, md) {
+         font-size: 13px;
+      }
+   }
+
+   &__accordion-content {
+      padding: 0 10px;
+   }
+
+   &__accordion-text {
+      height: 0;
+      overflow: hidden;
+      line-height: 1.7;
+      color: var(--gray);
+
+      transition: height 500ms ease;
+   }
+
+   &__picture {
+
+      @include media(max, xxl) {
+         display: none;
+      }
+   }
+
+   &__image {
+      width: 523px;
+      height: 728px;
+   }
+}
