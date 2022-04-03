@@ -2,7 +2,8 @@
 :root {
   --white: #FFF;
   --orange: #FFAB00;
-  --blue: #25074b
+  --blue: #25074b;
+  --gray: #4E5C66
 }
 @font-face {
   font-family: Ubuntu_Bold;
@@ -420,7 +421,7 @@ img {
 }
 .download__text {
   margin-bottom: 73px;
-  color: #768c9b
+  color: var(--gray)
 }
 .download__list {
   display: inline-grid;
@@ -481,7 +482,7 @@ img {
 }
 .about__image {
   width: 359px;
-  margin-top: -31px;
+  margin-top: -29px;
   margin-left: 103px
 }
 .about__rectangle {
@@ -504,6 +505,75 @@ img {
   bottom: -33px;
   width: 140px;
   height: 140px
+}
+.map {
+  padding-top: 85px
+}
+.map__wrap {
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 43px
+}
+.map__title {
+  margin-bottom: 30px
+}
+.map__title-color {
+  color: var(--orange)
+}
+.map__title-еarth {
+  display: inline-block;
+  position: relative
+}
+.map__title-еarth::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 31px;
+  height: 31px;
+  background: url(../images/icons/еarth.png) no-repeat center center/100% 100%
+}
+.map__text {
+  color: var(--gray)
+}
+.map__wrap_images {
+  position: relative;
+  top: -25px
+}
+.map__main-image {
+  width: 633px;
+  height: 271px
+}
+.map__image {
+  position: absolute
+}
+.map__image--number_1 {
+  width: 109px;
+  height: 65px;
+  top: 87px;
+  left: 55px
+}
+.map__image--number_2 {
+  width: 110px;
+  height: 65px;
+  top: 125px;
+  left: 144px
+}
+.map__image--number_3 {
+  width: 132px;
+  height: 70px;
+  top: 151px;
+  left: 266px
+}
+.map__image--number_4 {
+  width: 144px;
+  height: 79px;
+  top: 89px;
+  right: 102px
 }
 @media only screen and (min-width:768px) {
   .header__rectangle--number:hover {
@@ -721,13 +791,62 @@ img {
   }
   .about__image {
     position: relative;
-    margin-top: 48px;
+    margin-top: 51px;
     right: -36px;
     margin-left: unset;
     width: 155px
   }
   .about__rectangle {
     display: none
+  }
+  .map {
+    padding-top: 32px
+  }
+  .map__wrap {
+    grid-auto-flow: row;
+    gap: 4px
+  }
+  .map__title {
+    margin-bottom: 15px;
+    letter-spacing: -.5px
+  }
+  .map__title-еarth::before {
+    right: -23px;
+    -webkit-transform: translateY(-53%);
+    transform: translateY(-53%);
+    width: 19px;
+    height: 19px
+  }
+  .map__wrap_images {
+    top: unset
+  }
+  .map__main-image {
+    width: 540px;
+    height: 231px
+  }
+  .map__image--number_1 {
+    top: 72px;
+    left: 48px;
+    width: 93px;
+    height: 56px
+  }
+  .map__image--number_2 {
+    top: 108px;
+    left: 122px;
+    width: 93px;
+    height: 56px
+  }
+  .map__image--number_3 {
+    top: 129px;
+    left: 229px;
+    width: 113px;
+    height: 60px
+  }
+  .map__image--number_4 {
+    top: 77px;
+    right: 88px;
+    width: 123px;
+    height: 68px
   }
 }
 @media only screen and (max-width:1439px) and (max-width:767px) {
@@ -819,5 +938,22 @@ img {
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     margin: unset
+  }
+  .map__title {
+    margin-bottom: 10px
+  }
+  .map__title-еarth::before {
+    right: -20px;
+    -webkit-transform: translateY(-53%);
+    transform: translateY(-53%);
+    width: 15px;
+    height: 15px
+  }
+  .map__picture {
+    display: none
+  }
+  .map__main-image {
+    width: 158px;
+    height: 68px
   }
 }

@@ -38,7 +38,7 @@
 
 config.setEnv();
 config.addWoff(true);
-config.addWebp(false);
+config.addWebp(true);
 
 // Главные таски сборки
 import gulp from 'gulp';
@@ -60,7 +60,6 @@ import fontsFile from './gulp/tasks/fontsFile';
 import deploy from './gulp/tasks/deploy';
 
 export const build = gulp.series(
-   clean,
    gulp.parallel(
       html,
       style,

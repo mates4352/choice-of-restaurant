@@ -89,7 +89,7 @@
 
    &__text {
       margin-bottom: 73px;
-      color: #768C9B;
+      color: var(--gray);
 
       @include media(max, xxl) {
          margin-bottom: 10px;
