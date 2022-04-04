@@ -448,7 +448,7 @@ img {
 }
 .about {
   position: relative;
-  background: url(../images/background_about.jpg) no-repeat center center/100% 100%;
+  background: url(../images/background_about.jpg) no-repeat center center/1920px 560px;
   height: 562px
 }
 .about__wrap {
@@ -500,8 +500,11 @@ img {
 }
 .about__image {
   width: 359px;
-  margin-top: -29px;
-  margin-left: 103px
+  height: 587px;
+  margin-top: -22px;
+  margin-left: 103px;
+  -webkit-transform: rotate(1.85deg);
+  transform: rotate(1.85deg)
 }
 .about__rectangle {
   position: absolute
@@ -1354,7 +1357,7 @@ img {
   .about {
     height: 375px;
     margin-top: -30px;
-    background: url(../images/background_aboutXXL.jpg) no-repeat center center/100% 357px
+    background: url(../images/background_about.jpg) no-repeat center center/1440px 285px
   }
   .about__wrap {
     grid-template-columns: fit-content(346px) minmax(-webkit-min-content,-webkit-max-content);
@@ -1363,7 +1366,7 @@ img {
   }
   .about__content {
     row-gap: 15px;
-    margin-bottom: -85px
+    margin-bottom: -81px
   }
   .about__title br {
     display: none
@@ -1391,10 +1394,13 @@ img {
   }
   .about__image {
     position: relative;
-    margin-top: 51px;
     right: -36px;
+    -webkit-transform: rotate(1.2deg);
+    transform: rotate(1.2deg);
+    width: 155px;
+    height: 313px;
     margin-left: unset;
-    width: 155px
+    margin-top: 18px
   }
   .about__rectangle {
     display: none
@@ -1677,7 +1683,8 @@ img {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    margin: unset
+    margin: unset;
+    height: unset
   }
   .map__title {
     margin-bottom: 10px

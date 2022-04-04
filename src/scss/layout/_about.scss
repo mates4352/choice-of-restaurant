@@ -1,12 +1,12 @@
 .about {
    position: relative;
-   background: url("../images/background_about.jpg") no-repeat center center/ 100% 100%;
+   background: url("../images/background_about.jpg") no-repeat center center/1920px 560px;
    height: 562px;
 
    @include media(max, xxl) {
       height: 375px;
       margin-top: -30px;
-      background: url("../images/background_aboutXXL.jpg") no-repeat center center/100% 357px;
+      background: url("../images/background_about.jpg") no-repeat center center/1440px 285px;
    }
 
    @include media(max, md) {
@@ -37,7 +37,7 @@
 
       @include media(max, xxl) {
          row-gap: 15px;
-         margin-bottom: -85px;
+         margin-bottom: -81px;
       }
 
       @include media(max, md) {
@@ -139,15 +139,20 @@
 
    &__image {
       width: 359px;
-      margin-top: -29px;
+      height: 587px;
+      margin-top: -22px;
       margin-left: 103px;
+      transform: rotate(1.85deg);
 
       @include media(max, xxl) {
          position: relative;
-         margin-top: 51px;
          right: -36px;
-         margin-left: unset;
+         transform: rotate(1.2deg);
+
          width: 155px;
+         height: 313px;
+         margin-left: unset;
+         margin-top: 18px;
       }
 
       @include media(max, md) {
@@ -156,6 +161,7 @@
          left: 50%;
          transform: translateX(-50%);
          margin: unset;
+         height: unset;
       }
    }
 
