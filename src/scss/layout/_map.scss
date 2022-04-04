@@ -125,6 +125,10 @@
             width: 93px;
             height: 56px;
          }
+
+         @include media(min, md) {
+            animation: animationTransform_1 5s linear infinite;
+         }
       }
 
       &--number_2 {
@@ -140,6 +144,10 @@
 
             width: 93px;
             height: 56px;
+         }
+
+         @include media(min, md) {
+            animation: animationTransform_2 5s linear infinite;
          }
       }
 
@@ -157,6 +165,10 @@
             width: 113px;
             height: 60px;
          }
+
+         @include media(min, md) {
+            animation: animationTransform_3 10s linear infinite;
+         }
       }
 
       &--number_4 {
@@ -173,6 +185,76 @@
             width: 123px;
             height: 68px;
          }
+
+         @include media(min, md) {
+            animation: animationTransform_2 5s linear infinite;
+         }
       }
+   }
+}
+
+@keyframes animationTransform_1 {
+   0% {
+      transform: translateY(0) scale(1);
+   }
+
+   25% {
+      transform: translateY(-5px) scale(0.95);
+   }
+
+   50% {
+      transform: translateY(0) scale(1);
+   }
+
+   75% {
+      transform: translateY(5px) scale(0.95);
+   }
+
+   100% {
+      transform: translateY(0) scale(1);
+   }
+}
+
+@keyframes animationTransform_2 {
+   0% {
+      transform: translateY(0) scale(1);
+   }
+
+   25% {
+      transform: translateY(10px) scale(0.95);
+   }
+
+   50% {
+      transform: translateY(0) scale(1);
+   }
+
+   75% {
+      transform: translateY(-10px) scale(0.95);
+   }
+
+   100% {
+      transform: translateY(0) scale(1);
+   }
+}
+
+@keyframes animationTransform_3 {
+   0% {
+      transform: translateY(0) scale(1);
+   }
+
+   25% {
+      transform: translateY(-20px) scale(0.95);
+   }
+
+   50% {
+      transform: translateY(0) scale(1);
+   }
+
+   75% {
+      transform: translateY(20px) scale(0.95);
+   }
+
+   100% {
+      transform: translateY(0) scale(1);
    }
 }

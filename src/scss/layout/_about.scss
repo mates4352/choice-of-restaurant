@@ -55,11 +55,43 @@
          }
       }
 
-      span {
+      span:nth-of-type(1) {
          color: var(--orange);
 
          @include media(max, md) {
             display: block;
+         }
+      }
+
+      span:nth-of-type(2) {
+         display: inline-block;
+         position: relative;
+
+         &::before {
+            content: '';
+            position: absolute;
+            top: -35px;
+            right: 30px;
+
+            width: 30px;
+            height: 30px;
+
+            background: url("../images/icons/tel.png") no-repeat center center/100% 100%;
+
+            @include media(max, xxl) {
+               top: 50%;
+               right: -25px;
+               transform: translateY(-65%);
+
+               width: 19px;
+               height: 19px;
+            }
+
+            @include media(max, md) {
+               right: -20px;
+               width: 15px;
+               height: 15px;
+            }
          }
       }
    }

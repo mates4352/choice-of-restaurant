@@ -10,6 +10,7 @@
    }
 
    @include media(max, md) {
+      background: linear-gradient(180deg, #FFAB00 -182.82%, #FFCD68 -100.25%, #FFAB00 54.78%, #FFAB00 95.73%);
       margin-bottom: 30px;
       min-height: 325px;
    }
@@ -131,15 +132,17 @@
       height: 100%;
    }
 
-   &__rectangle {
-      position: absolute;
-      z-index: -1;
-      //animation: animationRectangle 10s infinite ease-out;
-
+   &__picture {
       @include media(max, md) {
          display: none;
          visibility: hidden;
       }
+   }
+
+   &__rectangle {
+      position: absolute;
+      z-index: -1;
+      //animation: animationRectangle 10s infinite ease-out;
 
       &--number {
          bottom: 19px;
@@ -157,6 +160,10 @@
             height: 38px;
 
             transition: unset;
+         }
+
+         @include media(max, md) {
+            display: none;
          }
 
          &::before {

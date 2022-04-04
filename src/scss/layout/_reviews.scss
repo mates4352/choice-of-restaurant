@@ -129,12 +129,15 @@
       text-align: right;
    }
 
-   &__rectangle {
-      position: absolute;
+   &__picture {
 
       @include media(max, xxl) {
          display: none;
       }
+   }
+
+   &__rectangle {
+      position: absolute;
 
       &--number_1 {
          width: 71px;
@@ -158,6 +161,18 @@
 
          top: 3px;
          right: 165px;
+      }
+   }
+
+   &__grass {
+      position: absolute;
+      right: 0;
+      bottom: -200px;
+      width: 653px;
+      height: 323px;
+
+      @include media(max, xxl) {
+         display: none;
       }
    }
 }
