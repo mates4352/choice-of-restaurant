@@ -23,6 +23,10 @@
    &__title {
       max-width: 338px;
       margin-bottom: 20px;
+
+      @include media(max, md) {
+         font-size: 16px;
+      }
    }
 
    &__title-icon {
