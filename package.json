@@ -44,5 +44,7 @@
       "webpack": "^5.66.0",
       "webpack-stream": "^7.0.0"
    },
-   "dependencies": {}
+   "dependencies": {
+      "aos": "^2.3.4"
+   }
 }
