@@ -72,11 +72,13 @@
       transition: clip-path 500ms ease;
    }
 
-   &:hover {
-      color: var(--white);
+   @include media(min, xxl) {
+      &:hover {
+         color: var(--white);
 
-      &::before {
-         clip-path: circle(100%);
+         &::before {
+            clip-path: circle(100%);
+         }
       }
    }
 
@@ -124,6 +126,16 @@
 
          @include media (max, md) {
             display: none;
+         }
+      }
+
+      @include media(min, md) {
+         &:hover {
+            color: var(--white);
+
+            &::before {
+               clip-path: circle(100%);
+            }
          }
       }
    }

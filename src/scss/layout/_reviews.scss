@@ -4,10 +4,10 @@
    min-height: 546px;
 
    @include media(max, xxl) {
-      min-height: 400px;
+      min-height: 420px;
       padding-top: 60px;
       padding-bottom: 60px;
-      background: url("../images/background_reviewsXXL.jpg") no-repeat top center/100% 400px;
+      background: url("../images/background_reviewsXXL.jpg") no-repeat top center/100% 420px;
    }
 
    @include media(max, md) {
