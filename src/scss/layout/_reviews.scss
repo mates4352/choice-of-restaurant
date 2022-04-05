@@ -22,10 +22,21 @@
       grid-auto-columns: minmax(min-content, max-content);
       grid-auto-flow: column;
       align-items: center;
-      column-gap: 95px;
+      justify-content: center;
+      column-gap: 180px;
+      padding-top: 100px;
 
       @include media(max, xxl) {
          grid-auto-flow: row;
+         padding-top: unset;
+      }
+   }
+
+   &__wrap-images {
+      position: relative;
+
+      @include media(max, xxl) {
+         display: none;
       }
    }
 
@@ -36,9 +47,37 @@
    }
 
    &__image {
-      width: 479px;
-      height: 551px;
+      width: 276px;
+      height: 364px;
       margin-top: -35px;
+   }
+
+   &__order {
+      position: absolute;
+
+      &--number_1 {
+         width: 200px;
+         height: 199px;
+
+         top: -138px;
+         left: -94px;
+      }
+
+      &--number_2 {
+         width: 149px;
+         height: 195px;
+
+         top: 35px;
+         right: -103px;
+      }
+
+      &--number_3 {
+         width: 207px;
+         height: 155px;
+
+         bottom: -104px;
+         left: -105px;
+      }
    }
 
    &__content {
@@ -129,13 +168,6 @@
       text-align: right;
    }
 
-   &__picture {
-
-      @include media(max, xxl) {
-         display: none;
-      }
-   }
-
    &__rectangle {
       position: absolute;
 
@@ -143,8 +175,8 @@
          width: 71px;
          height: 71px;
 
-         top: -17px;
-         left: 520px;
+         top: 24px;
+         left: 717px;
       }
 
       &--number_2 {

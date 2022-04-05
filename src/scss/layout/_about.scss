@@ -133,8 +133,11 @@
       }
    }
 
-   &__picture {
+   &__picture-rectangle {
 
+      @include media(max, xxl) {
+         display: none;
+      }
    }
 
    &__image {
@@ -167,10 +170,6 @@
 
    &__rectangle {
       position: absolute;
-
-      @include media(max, xxl) {
-         display: none;
-      }
 
       &--number_7 {
          top: -23px;
